@@ -5,7 +5,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { doAddTask } from '../actions/tasks'
 
-class NewTaskBar extends React.Component{
+export class NewTaskBar extends React.Component{
 
     state = {
         input : ''

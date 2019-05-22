@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import NewTaskBar from '../components/NewTaskBar'
+import { NewTaskBar } from '../components/NewTaskBar'
 
 describe('NewTask', () => {
     
