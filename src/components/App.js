@@ -1,13 +1,15 @@
-import React from 'react';
+import './App.css'
 
-class App extends React.Component {
+import React from 'react'
 
-    render(){
-        return (
-            <div>App</div>
-        )
-    }
+import NewTaskBar from './NewTaskBar'
 
+function App () {
+    return (
+        <div className='App'>
+            <NewTaskBar />
+        </div>
+    )
 }
 
 export default App;
