@@ -18,5 +18,8 @@ exports[`App has a valid snapshot 1`] = `
       />
     </form>
   </div>
+  <div
+    className="TaskList"
+  />
 </div>
 `;

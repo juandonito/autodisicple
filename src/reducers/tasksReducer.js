@@ -12,7 +12,7 @@ const tasksReducer = (state = INITIAL_STATE, action) => {
 }
 
 const applyTaskAdd = (state, action) => {
-    return [ ...state, action.title]
+    return [ ...state, action.task]
 }
 
 export default tasksReducer;
