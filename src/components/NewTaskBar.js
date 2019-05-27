@@ -37,6 +37,7 @@ export class NewTaskBar extends React.Component{
                         placeholder = 'New task' 
                         value = {input}
                         onChange = {this.handleInputChange}
+                        spellCheck='false'
                     />
                 </form>
             </div>

@@ -5,8 +5,11 @@ import { connect } from 'react-redux'
 import { doToggleTask } from '../actions/tasks'
 
 export const TaskItem = ({ task, onToggleTask }) => {
+    
+    const style = 'TaskItem' + (task.done ? ' done' : '');
+
     return (
-        <div className='TaskItem' onClick={() => onToggleTask(task.id)}>{task.title}</div>
+        <div className={style} onClick={() => onToggleTask(task.id)}>{task.title}</div>
     )
 }
 
