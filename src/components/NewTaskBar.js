@@ -20,7 +20,6 @@ export class NewTaskBar extends React.Component{
     handleInputSubmit = (e) => {
         e.preventDefault();
         this.props.onTaskAdd(this.state.input);
-        console.log(this.state.input);
         this.setState({
             input: ''
         })

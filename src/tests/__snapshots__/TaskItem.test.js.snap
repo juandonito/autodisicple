@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskItem has valid snapshot 1`] = `
+<div
+  className="TaskItem"
+  onClick={[Function]}
+>
+  this is a task test
+</div>
+`;

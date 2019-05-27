@@ -1,15 +1,19 @@
-import { TASK_ADD } from '../constants/actionTypes'
+import { TASK_ADD, TASK_TOGGLE } from '../constants/actionTypes'
 
 import uuid from 'uuid'
 
-const doAddTask = (title) => ({
+export const doAddTask = (title) => ({
     type: TASK_ADD,
     task : {
         title,
-        id: uuid()
+        id: uuid(),
+        done: false
     }
 })
 
-export {
-    doAddTask
-}
+export const doToggleTask = (id) => ({
+    type: TASK_TOGGLE,
+    task : {
+        id
+    }
+})

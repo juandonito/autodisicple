@@ -1,11 +1,19 @@
 import './TaskItem.css'
 
 import React from 'react'
+import { connect } from 'react-redux'
+import { doToggleTask } from '../actions/tasks'
 
-export const TaskItem = ({ task }) => {
+export const TaskItem = ({ task, onToggleTask }) => {
     return (
-        <div className='TaskItem'>{task.title}</div>
+        <div className='TaskItem' onClick={() => onToggleTask(task.id)}>{task.title}</div>
     )
 }
 
-export default TaskItem;
+const mapDispatchToProps = dispatch => {
+    return {
+        onToggleTask: id => dispatch(doToggleTask(id))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TaskItem);

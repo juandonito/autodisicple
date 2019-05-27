@@ -1,7 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
 
-import { TaskList } from '../components/TaskList'
+import store from '../store'
+import Provider from 'react-redux'
+
+import TaskList from '../components/TaskList'
 
 describe('TaskList', () => {
 
@@ -23,10 +27,22 @@ describe('TaskList', () => {
     it('renders without crashing', () => {
         const div = document.createElement('div');
         ReactDOM.render(
-            <TaskList tasks={TASK_LIST}/>,
+            <Provider store={store}>
+                <TaskList tasks={TASK_LIST}/>
+            </Provider>,
             div
         );
         ReactDOM.unmountComponentAtNode(div);
+    })
+
+    test('has valid snapshot', () => {
+        const component = renderer.create(
+            <Provider store={store}>
+                <TaskList tasks={TASK_LIST}/>
+            </Provider>
+        );
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
     })
     
 })
