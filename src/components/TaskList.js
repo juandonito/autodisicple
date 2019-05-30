@@ -3,6 +3,8 @@ import './TaskList.css'
 import React from 'react'
 import TaskItem from './TaskItem'
 
+import { getTodayTask } from '../selectors/task'
+
 import { connect } from 'react-redux'
 
 export const TaskList = ({ tasks }) => {
@@ -19,7 +21,7 @@ export const TaskList = ({ tasks }) => {
 }
 
 const mapStateToProps = (state) => ({
-    tasks:  state.tasksState
+    tasks:  getTodayTask(state)
 })
 
 export default connect(mapStateToProps)(TaskList);

@@ -7,7 +7,8 @@ export const doAddTask = (title) => ({
     task : {
         title,
         id: uuid(),
-        done: false
+        done: false,
+        date: new Date()
     }
 })
 
