@@ -10,6 +10,7 @@
 .NewTaskBar input {
     width: 100%;
     margin: auto;
+    padding: 4px;
 
     font-size: 1.5rem;
 
